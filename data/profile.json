@@ -1,0 +1,85 @@
+{
+  "brand": "DJ Eleven",
+  "hero": {
+    "title_big": "DJ ELEVEN",
+    "subtitle": "Bollywood • Techno • Commercial",
+    "bg_images": [
+    "/static/img/hero.jpg",
+    "/static/img/hero1.jpg",
+    "/static/img/hero2.png",
+    "/static/img/hero3.png"
+    ],
+    "slide_interval_ms": 2500
+  },
+  "about": {
+    "headline": "I AM DJ ELEVEN",
+    "text": "From Bollywood anthems to driving techno and commercial hits, Eleven delivers high-impact sets made for big rooms and late nights. Ex-resident DJ at Irish House Belagavi. Available for clubs, private events, and festivals."
+  },
+  "releases": [
+    {
+      "title": "Ishq Jalakar (Karvaan – Dhurandhar) | ELEVEN EDIT | Bolly Tech",
+      "artist": "DJ ELEVEN",
+      "image": "/static/img/release-1.png",
+      "url": "https://www.youtube.com/watch?v=tKDsMNes7Uc"
+    },
+    {
+      "title": "Hope (Original Mix)",
+      "artist": "DJ ELEVEN",
+      "image": "/static/img/release-2.jpg",
+      "url": "https://www.youtube.com/watch?v=EPQLIR_xjo0"
+    }
+  ],
+  "social": [
+    { "label": "Instagram", "url": "https://www.instagram.com/eeleven_music/" },
+    { "label": "YouTube", "url": "https://www.youtube.com/@surajshet1278" },
+    { "label": "SoundCloud", "url": "https://soundcloud.com/saboteur-7" }
+  ],
+  "contact": {
+    "address": "Belagavi, Karnataka",
+    "phone": "+91 8660292319",
+    "email": "surajshet5555@gmail.com"
+  },
+  "events": [
+  {
+    "title": "Soulmates Night",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-02-14",
+    "image": "/static/img/flyer-1.png",
+    "url": "https://www.instagram.com/p/DUtGPUrifCx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Rose Day party",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-02-07",
+    "image": "/static/img/flyer-2.png",
+    "url": "https://www.instagram.com/p/DUrQuCFEn0t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  }
+  ,
+  {
+    "title": "Toxic Saturday",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-01-24",
+    "image": "/static/img/flyer-3.png",
+    "url": "https://www.instagram.com/p/DUrQoFrEg-q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "The Brunch Therapy",
+    "venue": "Brew 59",
+    "city": "Belgaum",
+    "date": "2022-06-19",
+    "image": "/static/img/flyer-4.png",
+    "url": "https://www.instagram.com/p/DTXny2wiZVe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Summer Jump vol-02",
+    "venue": "Vinay Farms",
+    "city": "Belgaum",
+    "date": "2022-05-25",
+    "image": "/static/img/flyer-5.png",
+    "url": "https://www.instagram.com/p/DTXZPMYCZ_K/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  }
+]
+}

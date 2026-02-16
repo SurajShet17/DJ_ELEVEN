@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ profile.brand }}</title>
+
+  <!-- Optional fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<!-- Menu button -->
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+  <span class="menu-lines"></span>
+</button>
+
+<!-- Fullscreen overlay menu (matches your screenshot style) -->
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <div class="menu-stage" role="dialog" aria-modal="true">
+
+    <!-- Left image stack -->
+    <div class="menu-left">
+      <div class="stack">
+        <!-- You can swap these images (keep 3 for the stacked effect) -->
+        <div class="stack-card" style="--img:url('/static/img/eleven-1.png');"></div>
+        <div class="stack-card" style="--img:url('/static/img/eleven-1.png');"></div>
+        <div class="stack-card" style="--img:url('/static/img/eleven-1.jpg');"></div>
+      </div>
+    </div>
+
+    <!-- Right nav -->
+    <div class="menu-right">
+      <a class="menu-item" href="{{ url_for('home') }}">HOME</a>
+      <a class="menu-item" href="https://www.instagram.com/eeleven_music/" target="_blank" rel="noopener">INSTAGRAM</a>
+      <a class="menu-item" href="https://soundcloud.com/saboteur-7" target="_blank" rel="noopener">SOUNDCLOUD</a>
+      <a class="menu-item" href="https://www.youtube.com/@surajshet1278" target="_blank" rel="noopener">YOUTUBE</a>
+    </div>
+
+    <!-- Close button (white circle with red X like screenshot) -->
+    <button class="menu-close-btn" id="menuClose" aria-label="Close menu">
+      <span class="x"></span>
+    </button>
+
+    <!-- Small credit -->
+    <div class="menu-credit">DEVELOPED BY DJ ELEVEN</div>
+  </div>
+</div>
+
+
+  {% block content %}{% endblock %}
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

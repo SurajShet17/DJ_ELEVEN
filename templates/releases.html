@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page">
+  <div class="page-head">
+    <h1>Latest Releases</h1>
+    <p>Open a release to listen / watch.</p>
+  </div>
+
+  <div class="cards cards-wrap">
+    {% for r in profile.releases %}
+    <a class="card" href="{{ r.url }}" target="_blank" rel="noopener" style="--card-bg: url('{{ r.image }}');">
+      <div class="card-bg"></div>
+      <div class="card-top">{{ r.title }}</div>
+      <div class="card-bottom">{{ r.artist }}</div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
