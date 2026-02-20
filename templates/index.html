@@ -32,13 +32,16 @@
   </div>
 </section>
 
-<section class="section releases">
-  <div class="section-top">
-    <div class="section-kicker"></div>
-    <a class="cta-link" href="{{ url_for('releases') }}">
-      VIEW ALL RELEASES <span class="cta-dot">↗</span>
-    </a>
+<div class="section-top section-top--big">
+  <div>
+    <div class="section-title">LATEST RELEASES</div>
+    <div class="section-kicker">Click to open</div>
   </div>
+
+  <a class="cta-link" href="{{ url_for('releases') }}">
+      VIEW ALL RELEASES <span class="cta-dot">↗</span>
+  </a>
+</div>
 
   <div class="cards">
     {% for r in profile.releases %}
@@ -51,13 +54,16 @@
   </div>
 </section>
 
-<section class="section events" id="events">
-  <div class="section-top">
-    <div class="section-kicker">Events Performed</div>
-    <a class="cta-link js-scroll" href="#contact">
-      BOOKINGS <span class="cta-dot">↗</span>
-    </a>
+<div class="section-top section-top--big">
+  <div>
+    <div class="section-title">EVENTS PERFORMED</div>
+    <div class="section-kicker">hover to pause • click any flyer to open</div>
   </div>
+
+  <a class="cta-link js-scroll" href="#contact">
+    BOOKINGS <span class="cta-dot">↗</span>
+  </a>
+</div>
 
   <div class="marquee" data-speed="35">
     <div class="marquee-track">
@@ -81,6 +87,34 @@
 
   <div class="events-note">Hover to pause. Click any flyer to open.</div>
 </section>
+
+<div class="section-top section-top--big">
+  <div>
+    <div class="section-title">MOMENTS &amp; ENERGY</div>
+    <div class="section-kicker">highlights from the booth</div>
+  </div>
+
+  <a class="cta-link js-scroll" href="#contact">
+    BOOK NOW <span class="cta-dot">↗</span>
+  </a>
+</div>
+
+  <div class="mosaic" aria-label="DJ event moments gallery">
+    {% for m in profile.moments %}
+      {% if m.type == "image" %}
+        <figure class="tile tile-img js-reveal">
+          <div class="tile-bg" style="--tile-bg: url('{{ m.image }}');"></div>
+          <figcaption class="sr-only">{{ m.alt }}</figcaption>
+        </figure>
+      {% else %}
+        <div class="tile tile-quote js-reveal">
+        <div class="quote-text">{{ m.text | replace('\n','<br/>') | safe }}</div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
 
 <footer class="footer" id="contact">
   <div class="footer-cta">

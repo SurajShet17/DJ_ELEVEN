@@ -58,6 +58,24 @@ document.querySelectorAll(".marquee").forEach((marquee) => {
   track.style.setProperty("--duration", `${speed}s`);
 });
 
+// Scroll reveal for mosaic tiles
+const revealEls = document.querySelectorAll(".js-reveal");
+
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  revealEls.forEach((el) => io.observe(el));
+} else {
+  // fallback
+  revealEls.forEach((el) => el.classList.add("is-in"));
+}
 
 // Hero background crossfade slideshow (two-layer blend)
 (() => {
