@@ -807,9 +807,25 @@ a{color:inherit; text-decoration:none}
   }
 
   .flyer{
-    scroll-snap-align: start;
-    width: 280px;
-    height: 190px;
+    width: 240px;
+    height: 340px;        /* portrait card */
+  }
+
+  .flyer-img{
+    background-size: contain !important;  /* show full flyer */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0b0b0b;            /* fills empty space */
+  }
+  .flyer{
+    background: #0b0b0b;
+  }
+  .flyer{
+    border: 1px solid rgba(255,255,255,.12);
+  }
+  /* Optional: soften overlay so flyer details remain visible */
+  .flyer::after{
+    background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.05));
   }
 }
 .marquee::-webkit-scrollbar{ display:none; }
