@@ -84,7 +84,7 @@
 ],
 "moments": [
   { "type": "image", "image": "/static/img/eleven-6.png", "alt": "DJ set crowd" },
-  { "type": "image", "image": "/static/img/hero.jpg", "alt": "Booth performance" },
+  { "type": "image", "image": "/static/img/hero.png", "alt": "Booth performance" },
   { "type": "quote", "text": "Living life to\nthe fullest!", "author": "" },
   { "type": "image", "image": "/static/img/eleven-8.png", "alt": "Stage lights" },
   { "type": "image", "image": "/static/img/eleven-7.png", "alt": "Aftermovie still" },
