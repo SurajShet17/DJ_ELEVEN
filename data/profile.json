@@ -16,31 +16,35 @@
     "text": "From Bollywood anthems to driving techno and commercial hits, Eleven delivers high-impact sets made for big rooms and late nights. Ex-resident DJ at Irish House Belagavi. Available for clubs, private events, and festivals."
   },
   "releases": [
-    {
-      "title": "Vaari Jaavan | ELEVEN EDIT | Bolly Tech",
-      "artist": "DJ ELEVEN",
-      "image": "/static/img/release-3.png",
-      "url": "https://youtu.be/PdCkqdR94nU?si=E_9NIEDw_QB3MHuJ"
-    },
-    {
-      "title": "AARI AARI | ELEVEN EDIT | Bolly Tech",
-      "artist": "DJ ELEVEN",
-      "image": "/static/img/release-4.png",
-      "url": "https://youtu.be/aasKmzf9528?si=lvr41TUlsVyETNXk"
-    },
-    {
-      "title": "Ishq Jalakar (Karvaan – Dhurandhar) | ELEVEN EDIT | Bolly Tech",
-      "artist": "DJ ELEVEN",
-      "image": "/static/img/release-1.png",
-      "url": "https://www.youtube.com/watch?v=tKDsMNes7Uc"
-    },
-    {
-      "title": "Hope (Original Mix)",
-      "artist": "DJ ELEVEN",
-      "image": "/static/img/release-2.jpg",
-      "url": "https://www.youtube.com/watch?v=EPQLIR_xjo0"
-    }
-  ],
+  {
+    "title": "Vaari Jaavan | ELEVEN EDIT | Bolly Tech",
+    "artist": "DJ ELEVEN",
+    "image": "/static/img/release-3.png",
+    "url": "https://youtu.be/PdCkqdR94nU",
+    "youtube_id": "PdCkqdR94nU"
+  },
+  {
+    "title": "AARI AARI | ELEVEN EDIT | Bolly Tech",
+    "artist": "DJ ELEVEN",
+    "image": "/static/img/release-4.png",
+    "url": "https://youtu.be/aasKmzf9528",
+    "youtube_id": "aasKmzf9528"
+  },
+  {
+    "title": "Ishq Jalakar (Karvaan – Dhurandhar) | ELEVEN EDIT | Bolly Tech",
+    "artist": "DJ ELEVEN",
+    "image": "/static/img/release-1.png",
+    "url": "https://www.youtube.com/watch?v=tKDsMNes7Uc",
+    "youtube_id": "tKDsMNes7Uc"
+  },
+  {
+    "title": "Hope (Original Mix)",
+    "artist": "DJ ELEVEN",
+    "image": "/static/img/release-2.jpg",
+    "url": "https://www.youtube.com/watch?v=EPQLIR_xjo0",
+    "youtube_id": "EPQLIR_xjo0"
+  }
+],
   "social": [
     { "label": "Instagram", "url": "https://www.instagram.com/eeleven_music/" },
     { "label": "YouTube", "url": "https://www.youtube.com/@surajshet1278" },
@@ -173,5 +177,30 @@
   { "type": "image", "image": "/static/img/eleven-8.png", "alt": "Stage lights" },
   { "type": "image", "image": "/static/img/eleven-7.png", "alt": "Aftermovie still" },
   { "type": "quote", "text": "Music is the\nstrongest\nform of magic.", "author": "" }
-]
+],
+
+"youtube_showcase": {
+  "featured": {
+    "title": "Vaari Jaavan | ELEVEN EDIT | Bolly Tech",
+    "artist": "DJ ELEVEN",
+    "youtube_id": "E_9NIEDw_QB3MHuJ"
+  },
+  "videos": [
+    {
+      "title": "AARI AARI | ELEVEN EDIT | Bolly Tech",
+      "artist": "DJ Eleven",
+      "youtube_id": "lvr41TUlsVyETNXk"
+    },
+    {
+      "title": "Ishq Jalakar (Karvaan – Dhurandhar) | ELEVEN EDIT | Bolly Tech",
+      "artist": "DJ Eleven",
+      "youtube_id": "tKDsMNes7Uc"
+    },
+    {
+      "title": "Hope - Original Mix",
+      "artist": "DJ Eleven",
+      "youtube_id": "EPQLIR_xjo0"
+    }
+  ]
+}
 }

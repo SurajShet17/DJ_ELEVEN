@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <header class="hero" id="top" data-hero-images='{{ profile.hero.bg_images | tojson }}' data-hero-interval="{{ profile.hero.slide_interval_ms or 4500 }}">
   <div class="hero-media">
     <div class="hero-bg hero-bg-a"></div>
@@ -35,12 +36,12 @@
 </section>
 
 
-<section class="section releases" id="releases-preview">
-  <div class="section-top section-top--big">
+<section class="section releases youtube-releases" id="releases-preview">
+  <div class="section-top section-top--big release-head">
     <div>
-      <div class="section-eyebrow">Selected music</div>
+      <div class="section-eyebrow">Selected videos</div>
       <div class="section-title">LATEST RELEASES</div>
-      <div class="section-kicker">Click to open</div>
+      <div class="section-kicker">Watch the latest drops and edits</div>
     </div>
 
     <a class="cta-link" href="{{ url_for('releases') }}">
@@ -48,21 +49,60 @@
     </a>
   </div>
 
-  <div class="cards">
-    {% for r in profile.releases %}
+  {% set featured = profile.releases[0] %}
+
+  <!-- Featured YouTube video -->
+  <div class="featured-youtube js-reveal">
+    <div class="featured-youtube-frame">
+      <iframe
+        src="https://www.youtube.com/embed/{{ featured.youtube_id }}?rel=0&modestbranding=1&playsinline=1"
+        title="{{ featured.title }}"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="featured-youtube-meta">
+      <div>
+        <div class="featured-label">Featured release</div>
+        <h3>{{ featured.title }}</h3>
+        <p>{{ featured.artist }}</p>
+      </div>
+
       <a
-        class="card js-reveal"
-        href="{{ r.url }}"
+        class="watch-youtube-btn"
+        href="{{ featured.url }}"
         target="_blank"
         rel="noopener"
-        style="--card-bg: url('{{ r.image }}');"
-        data-index="{{ '%02d'|format(loop.index) }}"
-        aria-label="Open {{ r.title }} by {{ r.artist }}"
       >
-        <div class="card-bg"></div>
-        <div class="card-top">{{ r.title }}</div>
-        <div class="card-bottom">{{ r.artist }}</div>
+        Watch on YouTube
       </a>
+    </div>
+  </div>
+
+  <!-- Three videos below -->
+  <div class="youtube-video-grid" aria-label="Latest YouTube releases">
+    {% for r in profile.releases[1:4] %}
+      <article class="youtube-video-card js-reveal">
+        <div class="youtube-card-frame">
+          <iframe
+            src="https://www.youtube.com/embed/{{ r.youtube_id }}?rel=0&modestbranding=1&playsinline=1"
+            title="{{ r.title }}"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="youtube-card-info">
+          <div class="youtube-card-index">Release {{ '%02d'|format(loop.index + 1) }}</div>
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.artist }}</p>
+        </div>
+      </article>
     {% endfor %}
   </div>
 </section>
