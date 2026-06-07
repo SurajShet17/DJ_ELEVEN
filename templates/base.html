@@ -3,7 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>{{ profile.brand }}</title>
+
+  <meta name="description" content="{{ profile.hero.subtitle }} | Book {{ profile.brand }} for club nights, private events, festivals and unforgettable dance floors.">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ profile.brand }}">
+  <meta property="og:description" content="{{ profile.hero.subtitle }}">
+
+  {% set og_img = profile.hero.bg_images[0] if profile.hero.bg_images else '' %}
+  {% if og_img %}
+    {% if og_img.startswith('/static/') %}
+      <meta property="og:image" content="{{ request.url_root.rstrip('/') }}{{ og_img }}">
+    {% else %}
+      <meta property="og:image" content="{{ og_img }}">
+    {% endif %}
+  {% endif %}
 
   <!-- Optional fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,37 +29,64 @@
 
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
-<!-- Menu button -->
-<button class="menu-btn" id="menuBtn" aria-label="Open menu">
-  <span class="menu-lines"></span>
-</button>
+  {% set booking_href = '#contact' if request.endpoint == 'home' else url_for('home') ~ '#contact' %}
 
-<!-- Fullscreen overlay menu (matches your screenshot style) -->
-<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
-  <div class="menu-stage" role="dialog" aria-modal="true">
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <!-- Right nav -->
-    <div class="menu-right">
-      <a class="menu-item" href="{{ url_for('home') }}">HOME</a>
-      <a class="menu-item" href="https://www.instagram.com/eeleven_music/" target="_blank" rel="noopener">INSTAGRAM</a>
-      <a class="menu-item" href="https://soundcloud.com/saboteur-7" target="_blank" rel="noopener">SOUNDCLOUD</a>
-      <a class="menu-item" href="https://www.youtube.com/@surajshet1278" target="_blank" rel="noopener">YOUTUBE</a>
+  <a class="site-brand" href="{{ url_for('home') }}" aria-label="{{ profile.brand }} home">
+    {{ profile.brand }}
+  </a>
+
+  <a class="quick-book js-scroll" href="{{ booking_href }}">
+    Book now
+  </a>
+
+  <!-- Menu button -->
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menuOverlay">
+    <span class="menu-lines"></span>
+  </button>
+
+  <!-- Fullscreen overlay menu -->
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <div class="menu-stage" role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+
+      <!-- Left visual stack -->
+      <div class="menu-left" aria-hidden="true">
+        <div class="stack">
+          {% for img in profile.hero.bg_images[:3] %}
+            <div class="stack-card" style="--img: url('{{ img }}');"></div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Right nav -->
+      <nav class="menu-right" aria-label="Main menu">
+        <div class="sr-only" id="menuTitle">Main menu</div>
+
+        <a class="menu-item" href="{{ url_for('home') }}">HOME</a>
+        <a class="menu-item" href="{{ url_for('releases') }}">RELEASES</a>
+        <a class="menu-item js-scroll" href="{{ booking_href }}">BOOKINGS</a>
+        <a class="menu-item" href="https://www.instagram.com/eeleven_music/" target="_blank" rel="noopener">INSTAGRAM</a>
+        <a class="menu-item" href="https://soundcloud.com/saboteur-7" target="_blank" rel="noopener">SOUNDCLOUD</a>
+        <a class="menu-item" href="https://www.youtube.com/@surajshet1278" target="_blank" rel="noopener">YOUTUBE</a>
+      </nav>
+
+      <!-- Close button -->
+      <button class="menu-close-btn" id="menuClose" aria-label="Close menu">
+        <span class="x"></span>
+      </button>
+
+      <div class="menu-credit">DEVELOPED BY DJ ELEVEN</div>
     </div>
-
-    <!-- Close button (white circle with red X like screenshot) -->
-    <button class="menu-close-btn" id="menuClose" aria-label="Close menu">
-      <span class="x"></span>
-    </button>
-
-    <!-- Small credit -->
-    <div class="menu-credit">DEVELOPED BY DJ ELEVEN</div>
   </div>
-</div>
 
-
-  {% block content %}{% endblock %}
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
 
   <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
