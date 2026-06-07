@@ -1335,3 +1335,187 @@ button:focus-visible{
     animation: none !important;
   }
 }
+
+/* =========================
+   Mobile top + hamburger menu fix
+   Paste this at the VERY BOTTOM of styles.css
+========================= */
+
+@media (max-width: 900px){
+
+  body.menu-open{
+    overflow: hidden;
+  }
+
+  /* Top fixed elements */
+  .site-brand{
+    top: 24px;
+    left: 18px;
+    max-width: calc(100vw - 96px);
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 1.2px;
+    z-index: 70;
+  }
+
+  .quick-book{
+    display: none;
+  }
+
+  .menu-btn{
+    top: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    z-index: 95;
+  }
+
+  /* Hero mobile correction */
+  .hero{
+    margin: 8px;
+    height: 86svh;
+    min-height: 520px;
+    border-radius: 20px;
+  }
+
+  .hero-content{
+    padding: 22px;
+    align-items: center;
+  }
+
+  .hero-title{
+    font-size: clamp(46px, 18vw, 82px);
+    line-height: .88;
+    letter-spacing: 1px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .hero-subtitle{
+    margin-top: 14px;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    padding: 0 10px;
+  }
+
+  .hero-subtitle::before,
+  .hero-subtitle::after{
+    width: 18px;
+  }
+
+  .hero-bottom{
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .hero-link{
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* Fullscreen menu mobile correction */
+  .menu-overlay{
+    z-index: 110;
+  }
+
+  .menu-stage{
+    min-height: 100svh;
+    height: 100svh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 84px 20px 70px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu-left{
+    display: none !important;
+  }
+
+  .menu-right{
+    width: 100%;
+    min-height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 6px;
+    padding-bottom: 26px;
+  }
+
+  .menu-item{
+    width: 100%;
+    font-size: clamp(34px, 11vw, 54px);
+    line-height: .94;
+    letter-spacing: .5px;
+    white-space: normal;
+    word-break: normal;
+  }
+
+  .menu-close-btn{
+    top: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    z-index: 130;
+  }
+
+  .menu-credit{
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-align: left;
+    z-index: 125;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 420px){
+
+  .hero{
+    min-height: 500px;
+  }
+
+  .hero-title{
+    font-size: clamp(42px, 17vw, 68px);
+  }
+
+  .menu-stage{
+    padding: 78px 18px 64px;
+  }
+
+  .menu-right{
+    gap: 10px;
+  }
+
+  .menu-item{
+    font-size: clamp(30px, 10.4vw, 46px);
+    line-height: .95;
+  }
+
+  .menu-close-btn,
+  .menu-btn{
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Better height handling for Instagram in-app browser */
+@supports (height: 100dvh){
+  @media (max-width: 900px){
+    .hero{
+      height: 86dvh;
+    }
+
+    .menu-stage{
+      height: 100dvh;
+      min-height: 100dvh;
+    }
+  }
+}

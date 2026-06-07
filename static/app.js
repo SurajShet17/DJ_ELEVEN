@@ -12,6 +12,7 @@ function openMenu(){
   menuOverlay?.setAttribute("aria-hidden", "false");
   menuBtn?.setAttribute("aria-expanded", "true");
 
+  document.body.classList.add("menu-open");
   document.body.style.overflow = "hidden";
 
   const firstItem = menuOverlay?.querySelector(".menu-item");
@@ -23,6 +24,7 @@ function closeMenu(){
   menuOverlay?.setAttribute("aria-hidden", "true");
   menuBtn?.setAttribute("aria-expanded", "false");
 
+  document.body.classList.remove("menu-open");
   document.body.style.overflow = "";
 
   if (lastFocusedEl && typeof lastFocusedEl.focus === "function") {
