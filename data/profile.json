@@ -17,6 +17,18 @@
   },
   "releases": [
     {
+      "title": "Vaari Jaavan | ELEVEN EDIT | Bolly Tech",
+      "artist": "DJ ELEVEN",
+      "image": "/static/img/release-3.png",
+      "url": "https://youtu.be/PdCkqdR94nU?si=E_9NIEDw_QB3MHuJ"
+    },
+    {
+      "title": "AARI AARI | ELEVEN EDIT | Bolly Tech",
+      "artist": "DJ ELEVEN",
+      "image": "/static/img/release-4.png",
+      "url": "https://youtu.be/aasKmzf9528?si=lvr41TUlsVyETNXk"
+    },
+    {
       "title": "Ishq Jalakar (Karvaan – Dhurandhar) | ELEVEN EDIT | Bolly Tech",
       "artist": "DJ ELEVEN",
       "image": "/static/img/release-1.png",
@@ -40,6 +52,78 @@
     "email": "surajshet5555@gmail.com"
   },
   "events": [
+    {
+    "title": "Iconic Sunday",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-04-12",
+    "image": "/static/img/flyer-6.png",
+    "url": "https://www.instagram.com/p/DXB8kv5iaXC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+    {
+    "title": "Double Trouble",
+    "venue": "UK27",
+    "city": "Belgaum",
+    "date": "2026-05-23",
+    "image": "/static/img/flyer-7.png",
+    "url": "https://www.instagram.com/p/DYj6d5yJ5vU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Saturday Exclusive Night",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-03-07",
+    "image": "/static/img/flyer-13.png",
+    "url": "https://www.instagram.com/p/DVk8txWE05d/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Bollywood Night",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-03-04",
+    "image": "/static/img/flyer-8.png",
+    "url": "https://www.instagram.com/p/DWqS7BRk12K/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Ladies Night",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-03-03",
+    "image": "/static/img/flyer-9.png",
+    "url": "https://www.instagram.com/p/DWlQDk_kzQO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+ {
+    "title": "Box Office Saturday",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-03-28",
+    "image": "/static/img/flyer-10.png",
+    "url": "https://www.instagram.com/p/DWYshd2kz6o/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Supreme Sunday",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-03-15",
+    "image": "/static/img/flyer-11.png",
+    "url": "https://www.instagram.com/p/DV1Fs5kE4_b/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Fabulous Friday",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-03-13",
+    "image": "/static/img/flyer-12.png",
+    "url": "https://www.instagram.com/p/DVvsXXHgt_-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Suprise Frequency",
+    "venue": "Insomnia",
+    "city": "Belgaum",
+    "date": "2026-02-22",
+    "image": "/static/img/flyer-14.png",
+    "url": "https://www.instagram.com/p/DVDrmZ9iS5a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
   {
     "title": "Soulmates Night",
     "venue": "Insomnia",
@@ -88,6 +172,6 @@
   { "type": "quote", "text": "Living life to\nthe fullest!", "author": "" },
   { "type": "image", "image": "/static/img/eleven-8.png", "alt": "Stage lights" },
   { "type": "image", "image": "/static/img/eleven-7.png", "alt": "Aftermovie still" },
-  { "type": "quote", "text": "Music is the\nstrongest\nform of magic.", "author": "— DJ eleven" }
+  { "type": "quote", "text": "Music is the\nstrongest\nform of magic.", "author": "" }
 ]
 }
